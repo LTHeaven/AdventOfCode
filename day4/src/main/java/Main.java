@@ -73,17 +73,6 @@ public class Main {
         Map<Long, Integer[]> sleepTimes = new HashMap<>();
         long currentGuard = -1;
         fillSleepTimes(logBook, sleepTimes, currentGuard);
-//        for (long key : sleepTimes.keySet()){
-//            Integer[] times = sleepTimes.get(key);
-//            for(int i : times){
-//                if (i == 0){
-//                    System.out.print("-");
-//                }else{
-//                    System.out.print(i);
-//                }
-//            }
-//            System.out.println("");
-//        }
         //find guard with most minutes
         long currentChamp = -1;
         int currentLongestMinutes = 0;
