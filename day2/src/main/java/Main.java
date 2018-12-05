@@ -1,5 +1,3 @@
-package es.heavensgat;
-
 import java.util.*;
 
 public class Main {
@@ -23,14 +21,17 @@ public class Main {
                 char[] string1 = strings.get(i).toCharArray();
                 char[] string2 = strings.get(j).toCharArray();
                 int count = 0;
+                String possibleSolution = strings.get(i);
                 for(int k = 0; k < string1.length; k++){
                     if (string1[k] != string2[k]){
                         count++;
+                        if (count < 2) {
+                            possibleSolution = possibleSolution.substring(0, k) +  possibleSolution.substring(k+1);
+                        }
                     }
-                    if (count == 1){
-                        solution= strings.get(i);
-                        solution = solution.substring(0, k) + solution.substring(k+1);
-                    }
+                }
+                if (count == 1){
+                    solution= possibleSolution;
                 }
             }
         }
